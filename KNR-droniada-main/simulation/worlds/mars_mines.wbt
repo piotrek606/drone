@@ -1,0 +1,730 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Grass.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/pipes/protos/PipeSection.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/manhole/protos/SquareManhole.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/abstract/GenericTireAppearance.proto"
+
+WorldInfo {
+  defaultDamping Damping {
+    linear 0.6
+    angular 0.6
+  }
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        10
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.11920174025980257 0.9664282885469505 0.2276121881957259 0.9932267127567634
+  position -8.406988111803045 -5.928026325856562 3.462550457301759
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1000 1000
+  appearance Grass {
+  }
+}
+DEF drone Solid {
+  translation -6.488014382650965 -6.52592997245146 0.24921237524497666
+  rotation 0.4614809542931275 0.20130189939694074 -0.8640097650628078 0.00039290441824215604
+  children [
+    Transform {
+      translation -0.28 -0.28 -0.22
+      scale 0.001 0.001 0.001
+      children [
+        Shape {
+        }
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Mesh {
+            url [
+              "../resources/drone_model.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  boundingObject Box {
+    size 0.5 0.5 0.4
+  }
+  physics Physics {
+    mass 2
+    damping Damping {
+      linear 0.6
+      angular 0.6
+    }
+  }
+}
+SquareManhole {
+  translation -6.5 -6.5 0
+  name "drone takeoff(1)"
+  size 0.5 0.5 0.1
+}
+PipeSection {
+  translation 0 20 0.3
+  radius 0.2
+  subdivision 20
+  appearance PBRAppearance {
+    baseColor 0 0 1
+    roughness 1
+    metalness 0
+  }
+}
+SquareManhole {
+  translation -6.5 -5.5 -1.11022e-16
+  name "robot parking"
+  size 0.5 0.5 0.1
+}
+Solid {
+  translation -4 4 0.029822482422153317
+  children [
+    Transform {
+      translation -0.035 -0.035 -0.035
+      scale 0.001 0.001 0.001
+      children [
+        DEF tennis_ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../resources/tennis_ball.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "ball"
+  boundingObject Sphere {
+    radius 0.03
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation 0 4 0.029822482422153317
+  children [
+    Transform {
+      translation -0.035 -0.035 -0.035
+      scale 0.001 0.001 0.001
+      children [
+        DEF tennis_ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../resources/tennis_ball.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "ball(1)"
+  boundingObject Sphere {
+    radius 0.03
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation 4 4 0.029822482422153317
+  children [
+    Transform {
+      translation -0.035 -0.035 -0.035
+      scale 0.001 0.001 0.001
+      children [
+        DEF tennis_ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../resources/tennis_ball.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "ball(2)"
+  boundingObject Sphere {
+    radius 0.03
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation -4 0 0.029822482422153317
+  children [
+    Transform {
+      translation -0.035 -0.035 -0.035
+      scale 0.001 0.001 0.001
+      children [
+        DEF tennis_ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../resources/tennis_ball.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "ball(3)"
+  boundingObject Sphere {
+    radius 0.03
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation -2.0769465364417286e-16 -0.0003516306984445791 0.029822482422153313
+  rotation 1 -2.1591840350527876e-13 -3.947300395263234e-15 0.02957709156323731
+  children [
+    Transform {
+      translation -0.035 -0.035 -0.035
+      scale 0.001 0.001 0.001
+      children [
+        DEF tennis_ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../resources/tennis_ball.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "ball(4)"
+  boundingObject Sphere {
+    radius 0.03
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation 4 0 0.029822482422153317
+  children [
+    Transform {
+      translation -0.035 -0.035 -0.035
+      scale 0.001 0.001 0.001
+      children [
+        DEF tennis_ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../resources/tennis_ball.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "ball(5)"
+  boundingObject Sphere {
+    radius 0.03
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation -4 -4 0.029822482422153317
+  children [
+    Transform {
+      translation -0.035 -0.035 -0.035
+      scale 0.001 0.001 0.001
+      children [
+        DEF tennis_ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../resources/tennis_ball.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "ball(6)"
+  boundingObject Sphere {
+    radius 0.03
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation 0 -4 0.029822482422153317
+  children [
+    Transform {
+      translation -0.035 -0.035 -0.035
+      scale 0.001 0.001 0.001
+      children [
+        DEF tennis_ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../resources/tennis_ball.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "ball(7)"
+  boundingObject Sphere {
+    radius 0.03
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation 4 -4 0.029822482422153317
+  children [
+    Transform {
+      translation -0.035 -0.035 -0.035
+      scale 0.001 0.001 0.001
+      children [
+        DEF tennis_ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../resources/tennis_ball.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "ball(8)"
+  boundingObject Sphere {
+    radius 0.03
+  }
+  physics Physics {
+  }
+}
+Robot {
+  translation -6.4900011449611466 -5.519998901623421 0.28937674791302814
+  rotation -0.999999999997866 3.916228992906442e-07 -2.0284433752797867e-06 4.501883844546396e-06
+  children [
+    DEF COMPASS Compass {
+    }
+    DEF GPS GPS {
+    }
+    DEF GYRO Gyro {
+    }
+    DEF INERTIAL_UNIT InertialUnit {
+    }
+    Propeller {
+      shaftAxis 0 0 1
+      device RotationalMotor {
+        name "motor_4"
+        maxVelocity 20
+      }
+      fastHelix Solid {
+        translation -0.2 0.19 0.05
+        children [
+          DEF pro Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.07
+            }
+            castShadows FALSE
+          }
+        ]
+        boundingObject USE pro
+        physics Physics {
+        }
+      }
+    }
+    Propeller {
+      shaftAxis 0 0 1
+      torqueConstants -1 0
+      device RotationalMotor {
+        name "motor_3"
+        maxVelocity 20
+      }
+      fastHelix Solid {
+        translation -0.2 -0.19 0.05
+        children [
+          DEF pro Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.07
+            }
+            castShadows FALSE
+          }
+        ]
+        boundingObject USE pro
+        physics Physics {
+        }
+      }
+    }
+    Propeller {
+      shaftAxis 0 0 1
+      torqueConstants -1 0
+      device RotationalMotor {
+        name "motor_1"
+        maxVelocity 20
+      }
+      fastHelix Solid {
+        translation 0.19 0.2 0.05
+        children [
+          DEF prop Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.07
+            }
+            castShadows FALSE
+          }
+        ]
+        boundingObject USE prop
+        physics Physics {
+        }
+      }
+    }
+    Propeller {
+      shaftAxis 0 0 1
+      device RotationalMotor {
+        name "motor_2"
+        maxVelocity 20
+      }
+      fastHelix Solid {
+        translation 0.19 -0.2 0.05
+        children [
+          DEF prop Shape {
+            appearance PBRAppearance {
+              baseColor 1 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.07
+            }
+            castShadows FALSE
+          }
+        ]
+        boundingObject USE prop
+        physics Physics {
+        }
+      }
+    }
+    Pose {
+      translation -0.281 -0.282 -0.312
+      children [
+        Shape {
+          appearance GenericTireAppearance {
+          }
+          geometry Mesh {
+            url [
+              "dronik.OBIEKT-dronik.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  boundingObject DEF BODY Group {
+    children [
+      Pose {
+        translation 0.188 0.188 0.0315
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.047
+              radius 0.126
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.188 -0.1712 0.0315
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.047
+              radius 0.126
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.188 -0.188 0.0315
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.047
+              radius 0.126
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.188 0.188 0.0315
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.047
+              radius 0.126
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.1712 0.1712 0
+        rotation 0.35740699927911007 0.8628559982596194 0.35740699927911007 -1.7177753071795863
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.085
+              radius 0.015
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.1712 -0.1712 0
+        rotation 0.35740699927911007 -0.8628559982596194 0.35740699927911007 1.71777
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.085
+              radius 0.015
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.1712 -0.1712 0
+        rotation 0.35740699927911007 0.8628559982596194 0.35740699927911007 -1.7177753071795863
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.085
+              radius 0.015
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.1712 0.1712 0
+        rotation -0.8628565621288802 0.3574058186283875 0.35740681862788 -1.7177753071795863
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.085
+              radius 0.015
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.109 -0.109 0
+        rotation 0.8628565621288802 0.3574058186283875 0.35740681862788 1.71777
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.168
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.109 -0.109 0
+        rotation 0.3574058186283875 -0.8628565621288802 0.35740681862788 1.71777
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.168
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.109 0.109 0
+        rotation 0.35740699927911007 -0.8628559982596194 0.35740699927911007 1.71777
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.168
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.125 8.59528e-07 -0.234
+        rotation 1 0 0 1.5708
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.268
+              radius 0.01
+            }
+          }
+        ]
+        translationStep 0.001
+        rotationStep 0.05
+      }
+      Pose {
+        translation 0.125 8.59528e-07 -0.234
+        rotation 1 0 0 1.5708
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.268
+              radius 0.01
+            }
+          }
+        ]
+        translationStep 0.001
+        rotationStep 0.05
+      }
+      Pose {
+        translation -0.109 0.109 -1.23323e-07
+        rotation 0.3574058186283875 0.8628565621288802 -0.35740681862788 1.71777
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.168
+              radius 0.01
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.0911502 0 -0.129818
+        rotation 0 1 0 -2.82743
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.225
+              radius 0.008
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.0911502 0 -0.129818
+        rotation 0 1 0 2.82743339
+        children [
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.225
+              radius 0.008
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0 0.019 -0.037
+        children [
+          Shape {
+            geometry Box {
+              size 0.095 0.25 0.024
+            }
+          }
+        ]
+      }
+      Shape {
+        geometry Box {
+          size 0.15 0.15 0.05
+        }
+      }
+    ]
+  }
+  physics Physics {
+    centerOfMass [
+      0 0 0.67
+    ]
+    damping Damping {
+      linear 0.5
+      angular 0.5
+    }
+  }
+  controller "my_controller4"
+}
